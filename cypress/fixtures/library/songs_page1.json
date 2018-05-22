@@ -1,0 +1,210 @@
+{
+    "results": [
+        {
+            "id": 2,
+            "title": "Black",
+            "filename": "Black - INS - Black.avi",
+            "directory": "kara",
+            "duration": 600,
+            "version": "",
+            "detail": "",
+            "detail_video": "",
+            "tags": [],
+            "artists": [],
+            "works": [],
+            "lyrics": null,
+            "date_created": "2018-04-25T14:55:18.056363Z",
+            "date_updated": "2018-04-25T14:55:18.056398Z"
+        },
+        {
+            "id": 3,
+            "title": "BlackRunning to Horizon",
+            "filename": "City Hunter - OP3 - Running to Horizon.mp4",
+            "directory": "kara",
+            "duration": 90,
+            "version": "versultimate",
+            "detail": "super detail",
+            "detail_video": "super video detai",
+            "tags": [
+                {
+                    "id": 1,
+                    "name": "PV",
+                    "color_hue": 162,
+                    "disabled": false
+                },
+                {
+                    "id": 8,
+                    "name": "INST",
+                    "color_hue": 215,
+                    "disabled": false
+                }
+            ],
+            "artists": [
+                {
+                    "id": 1,
+                    "name": "The artist"
+                },
+                {
+                    "id": 4,
+                    "name": "Artist1"
+                }
+            ],
+            "works": [
+                {
+                    "work": {
+                        "id": 1,
+                        "title": "Super work",
+                        "subtitle": "subsuper",
+                        "work_type": {
+                            "name": "Anime",
+                            "name_plural": "Animes",
+                            "query_name": "anime",
+                            "icon_name": "television"
+                        }
+                    },
+                    "link_type": "OP",
+                    "link_type_number": 2,
+                    "episodes": "1,2"
+                }
+            ],
+            "lyrics": {
+                "text": "Lalalalalalala"
+            },
+            "date_created": "2018-04-25T14:55:45.644298Z",
+            "date_updated": "2018-05-15T16:00:54.331727Z"
+        },
+        {
+            "id": 1,
+            "title": "Empty song",
+            "filename": "empty.avi",
+            "directory": "emptiness",
+            "duration": 90,
+            "version": "",
+            "detail": "",
+            "detail_video": "",
+            "tags": [],
+            "artists": [],
+            "works": [],
+            "lyrics": null,
+            "date_created": "2018-04-19T16:23:06.196352Z",
+            "date_updated": "2018-04-19T16:23:06.196388Z"
+        },
+        {
+            "id": 4,
+            "title": "Song0",
+            "filename": "",
+            "directory": "",
+            "duration": 0,
+            "version": "",
+            "detail": "",
+            "detail_video": "",
+            "tags": [],
+            "artists": [],
+            "works": [],
+            "lyrics": null,
+            "date_created": "2018-05-15T15:36:49.936672Z",
+            "date_updated": "2018-05-15T15:36:49.936795Z"
+        },
+        {
+            "id": 5,
+            "title": "Song1",
+            "filename": "",
+            "directory": "",
+            "duration": 0,
+            "version": "",
+            "detail": "",
+            "detail_video": "",
+            "tags": [],
+            "artists": [],
+            "works": [],
+            "lyrics": null,
+            "date_created": "2018-05-15T15:36:49.947513Z",
+            "date_updated": "2018-05-15T15:36:49.947609Z"
+        },
+        {
+            "id": 14,
+            "title": "Song10",
+            "filename": "",
+            "directory": "",
+            "duration": 0,
+            "version": "",
+            "detail": "",
+            "detail_video": "",
+            "tags": [],
+            "artists": [],
+            "works": [],
+            "lyrics": null,
+            "date_created": "2018-05-15T15:36:49.973302Z",
+            "date_updated": "2018-05-15T15:36:49.973341Z"
+        },
+        {
+            "id": 15,
+            "title": "Song11",
+            "filename": "",
+            "directory": "",
+            "duration": 0,
+            "version": "",
+            "detail": "",
+            "detail_video": "",
+            "tags": [],
+            "artists": [],
+            "works": [],
+            "lyrics": null,
+            "date_created": "2018-05-15T15:36:49.975921Z",
+            "date_updated": "2018-05-15T15:36:49.975968Z"
+        },
+        {
+            "id": 16,
+            "title": "Song12",
+            "filename": "",
+            "directory": "",
+            "duration": 0,
+            "version": "",
+            "detail": "",
+            "detail_video": "",
+            "tags": [],
+            "artists": [],
+            "works": [],
+            "lyrics": null,
+            "date_created": "2018-05-15T15:36:49.978756Z",
+            "date_updated": "2018-05-15T15:36:49.978803Z"
+        },
+        {
+            "id": 17,
+            "title": "Song13",
+            "filename": "",
+            "directory": "",
+            "duration": 0,
+            "version": "",
+            "detail": "",
+            "detail_video": "",
+            "tags": [],
+            "artists": [],
+            "works": [],
+            "lyrics": null,
+            "date_created": "2018-05-15T15:36:49.981080Z",
+            "date_updated": "2018-05-15T15:36:49.981123Z"
+        },
+        {
+            "id": 18,
+            "title": "Song14",
+            "filename": "",
+            "directory": "",
+            "duration": 0,
+            "version": "",
+            "detail": "",
+            "detail_video": "",
+            "tags": [],
+            "artists": [],
+            "works": [],
+            "lyrics": null,
+            "date_created": "2018-05-15T15:36:49.987844Z",
+            "date_updated": "2018-05-15T15:36:49.987948Z"
+        }
+    ],
+    "pagination": {
+        "last": 4,
+        "current": 1
+    },
+    "count": 31
+}

@@ -1,0 +1,26 @@
+{
+    "count": 1,
+    "pagination": {
+        "last": 1,
+        "current": 1
+    },
+    "results": [
+        {
+            "id": 1,
+            "title": "Super work",
+            "subtitle": "subsuper",
+            "work_type": {
+                "name": "Anime",
+                "name_plural": "Animes",
+                "query_name": "anime",
+                "icon_name": "television"
+            },
+            "song_count": 1
+        }
+    ],
+    "query": {
+        "remaining": [
+            "ork"
+        ]
+    }
+}

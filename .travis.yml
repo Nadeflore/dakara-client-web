@@ -1,0 +1,27 @@
+language: node_js
+node_js:
+  - 9
+
+# restrict to branches
+branches:
+  only:
+    - master
+    - develop
+
+# cache, to avoid re-installing dependencies each time
+cache:
+  directories:
+    - ~/.npm
+    - node_modules
+
+# install dependencies
+install:
+  - npm install
+
+# build js and css bundles
+before_script:
+  - npx webpack
+
+# run actual tests with video recording
+script:
+  - npm run test-record

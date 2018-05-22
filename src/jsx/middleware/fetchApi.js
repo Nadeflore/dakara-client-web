@@ -1,3 +1,4 @@
+import fetch from 'unfetch'
 import { LOGOUT } from 'actions/token'
 export const FETCH_API = "FETCH_API"
 
@@ -108,7 +109,7 @@ export default ({getState, dispatch}) => next => action => {
             }
 
             const contentType = response.headers.get("content-type")
-            if (contentType != "application/json") {
+            if (!contentType.includes("application/json")) {
                 if (!response.ok) {
                     return Promise.reject()
                 }

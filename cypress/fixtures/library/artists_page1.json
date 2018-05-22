@@ -1,0 +1,34 @@
+{
+    "results": [
+        {
+            "id": 10,
+            "name": "Artist7",
+            "song_count": 0
+        },
+        {
+            "id": 11,
+            "name": "Artist8",
+            "song_count": 0
+        },
+        {
+            "id": 12,
+            "name": "Artist9",
+            "song_count": 0
+        },
+        {
+            "id": 2,
+            "name": "Artistsi1",
+            "song_count": 0
+        },
+        {
+            "id": 1,
+            "name": "The artist",
+            "song_count": 1
+        }
+    ],
+    "count": 5,
+    "pagination": {
+        "last": 1,
+        "current": 1
+    }
+}

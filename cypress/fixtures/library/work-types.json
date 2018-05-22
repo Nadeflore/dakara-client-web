@@ -1,0 +1,31 @@
+{
+    "count": 4,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "name": "Anime",
+            "name_plural": "Animes",
+            "query_name": "anime",
+            "icon_name": "television"
+        },
+        {
+            "name": "Cartoon",
+            "name_plural": "Cartoons",
+            "query_name": "cartoon",
+            "icon_name": "globe"
+        },
+        {
+            "name": "Game",
+            "name_plural": "Games",
+            "query_name": "game",
+            "icon_name": "gamepad"
+        },
+        {
+            "name": "Live action",
+            "name_plural": "Live actions",
+            "query_name": "live-action",
+            "icon_name": "film"
+        }
+    ]
+}

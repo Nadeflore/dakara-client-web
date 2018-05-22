@@ -1,0 +1,8 @@
+{
+    "id": 1,
+    "username": "flore",
+    "is_superuser": true,
+    "users_permission_level": null,
+    "library_permission_level": null,
+    "playlist_permission_level": null
+}

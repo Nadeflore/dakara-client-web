@@ -1,0 +1,25 @@
+{
+    "results": [
+        {
+            "id": 13,
+            "title": "Song9",
+            "filename": "",
+            "directory": "",
+            "duration": 0,
+            "version": "",
+            "detail": "",
+            "detail_video": "",
+            "tags": [],
+            "artists": [],
+            "works": [],
+            "lyrics": null,
+            "date_created": "2018-05-15T15:36:49.970325Z",
+            "date_updated": "2018-05-15T15:36:49.970350Z"
+        }
+    ],
+    "pagination": {
+        "last": 4,
+        "current": 4
+    },
+    "count": 31
+}
