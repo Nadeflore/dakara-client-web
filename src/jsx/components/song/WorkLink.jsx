@@ -17,6 +17,7 @@ import { workLinkPropType } from 'serverPropTypes/library'
 export default class WorkLink extends Component {
     static propTypes = {
         workLink: workLinkPropType.isRequired,
+        workTitle: PropTypes.string,
         query: PropTypes.object,
         longLinkType: PropTypes.bool,
         noIcon: PropTypes.bool,
@@ -24,7 +25,10 @@ export default class WorkLink extends Component {
     }
 
     render() {
-        const { workLink, query, longLinkType, noIcon, noEpisodes } = this.props
+        const { workLink, workTitle, query, longLinkType, noIcon, noEpisodes } = this.props
+        
+        // Title if not specified
+        let title = workTitle || workLink.work.title
 
         // Subtitle if any
         let subtitle
@@ -93,7 +97,7 @@ export default class WorkLink extends Component {
 
                                 return searchWords
                             }}
-                            textToHighlight={workLink.work.title}
+                            textToHighlight={title}
                         />
                         {subtitle}
                     </span>

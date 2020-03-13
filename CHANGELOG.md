@@ -49,6 +49,7 @@
 - Playlist entry can be re-ordered from the playlist page.
 - Setting page to set kara date stop.
 - Feedback on library when a song is too long to be added to playlist.
+- Alternative titles are now displayed
 
 ### Changed
 

@@ -12,10 +12,15 @@ export const workTypePropType = PropTypes.shape({
     name_plural: PropTypes.string.isRequired,
 })
 
+export const workAltTitlePropType = PropTypes.shape({
+    title: PropTypes.string.isRequired,
+})
+
 export const workPropType = PropTypes.shape({
     work_type: workTypePropType.isRequired,
     title: PropTypes.string.isRequired,
     subtitle: PropTypes.string,
+    alternative_titles: PropTypes.arrayOf(workAltTitlePropType),
     song_count: PropTypes.number,
 })
 

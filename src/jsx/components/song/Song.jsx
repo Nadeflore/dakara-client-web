@@ -26,6 +26,51 @@ export default class Song extends Component {
         noTag: PropTypes.bool,
         karaokeRemainingSeconds: PropTypes.number,
     }
+    
+    /**
+     * Compute the best matching work title to display with the associated work link 
+     * for a Song query.
+     * @param {array} workLinks - WorkLinks associated to the song
+     * @returns {Object}
+     */
+    computeBestWorkMatching(workLinks) {
+        let workMatched = workLinks[0]
+        let workTitle = workLinks[0].work.title
+
+        // Display the first work when the query is invalid
+        if (!this.props.query) return { workMatched: workMatched, workTitle: workTitle }
+        
+        let queryWork = this.props.query.remaining.join(' ')
+        // Display the first work when the query is empty
+        if (queryWork.length == 0) return { workMatched: workMatched, workTitle: workTitle }
+
+        // Compute the matching title and worklink
+        // Retrieve the list of work titles excluding the titles not included in the query
+        let regex = new RegExp(queryWork, "i")
+        let workTitleList = workLinks.map(
+            (wl) => [wl.work.title].concat(
+                wl.work.alternative_titles.map((e) => e.title)).filter((t) => regex.test(t))
+        )
+
+        // Retrieve the list of titles within a single list
+        let titleList = []
+        workTitleList.forEach((wt) => Array.prototype.push.apply(titleList, wt))
+
+        // Display the first work when there are not work titles matching
+        if (titleList.length == 0) return { workMatched: workMatched, workTitle: workTitle }
+        
+        // Associate the work title indexes to the work links
+        let indexWorkLinks = workTitleList.map((wt) => wt.length)
+
+        // Sort the work titles depending on the title length
+        let matchingTitle = titleList.slice().sort((a,b) => a.length - b.length)[0]
+        let indexTitle = titleList.indexOf(matchingTitle)
+
+        // Find the associated work link
+        let indexWorkLink = indexWorkLinks.findIndex((e) => indexTitle < e)
+
+        return { workMatched: workLinks[indexWorkLink], workTitle: matchingTitle }
+    }
 
     render() {
         const { song, query, karaokeRemainingSeconds } = this.props
@@ -51,19 +96,24 @@ export default class Song extends Component {
         let artistWork
         let withArtistAndWork = false
         if (!this.props.noArtistWork) {
-
-            // Display first work if any
+            
+            // Display the works that matches the best the query if any
             // Highlighted with query
-            let firstWorkLink
+            let displayedWorkLink
             if (song.works.length > 0) {
-                // display the first work only for this display
-                firstWorkLink = (
+
+                    // Compute the best matching work with the query
+                    let workMatching = this.computeBestWorkMatching(song.works)
+
+                    // Display the work and the work title that match the best the query
+                    displayedWorkLink = (
                         <WorkLink
-                            workLink={song.works[0]}
+                            workLink={workMatching.workMatched}
+                            workTitle={workMatching.workTitle}
                             query={query}
                             noEpisodes
                         />
-                )
+                    )
 
                 // check if there is at least an artist too
                 withArtistAndWork = song.artists.length > 0
@@ -79,7 +129,7 @@ export default class Song extends Component {
 
             artistWork = (
                 <div className="artist-work">
-                    {firstWorkLink}
+                    {displayedWorkLink}
                     {artists}
                 </div>
             )

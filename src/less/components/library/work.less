@@ -12,12 +12,34 @@
 .library-entry.library-entry-work {
     .library-entry-work-artist-display {
         .header {
-            .title {
-            }
+            display: flex;
 
-            .subtitle {
-                opacity: 0.65;
-                margin-left: 0.5em;
+            .titles {
+                .complete-title {
+                    display: inline;
+                    
+                    .title {
+                    }
+
+                    .subtitle {
+                        opacity: 0.65;
+                        margin-left: 0.5em;
+                    }
+                }
+
+                .alternative-titles {
+                    margin-top: 0.5em;
+                    
+                    .alternative-title {
+                        display: inline-block;
+                        opacity: 0.85;
+                    }
+
+                    .alternative-title:not(:last-child)::after {
+                        content: ", ";
+                        white-space: pre;
+                    }
+                }
             }
         }
     }
